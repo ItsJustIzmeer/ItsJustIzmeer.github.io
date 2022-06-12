@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tools</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.0/css/unicons.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600,700">
+		
+	</head>
+
+	<header class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo-1.png"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#about"><i class="uil uil-user"></i>ABOUT</a></li>
+                    <li><a href="index.html#portfolio"><i class="uil uil-apps"></i>PORTFOLIO</a></li>
+                    <li><a href="index.html#tools"><i class="uil uil-wrench"></i>TOOLS</a>
+                        <ul class="dropdown">
+                            <li><a href="tools.html#calculator">CALCULATOR</a></li>
+                            <li><a href="tools.html#bmicalculator">BMI CALCULATOR</a></li>
+							<li><a href="tools.html#unitconverter">UNIT CONVERTER</a></li>
+                            <li><a href="tools.html#taxcalculator">INCOME TAX CALCULATOR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact"><i class="uil uil-envelope"></i>CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+	<body>
+		<section class="main-calculator" id="calculator">
+			<div class="header-calculator">
+				<h1>CALCULATOR</h1>
+			</div>
+
+			<div class="box">
+				<div class="calculator">
+					<div class="result">
+						<div class="history">
+							<p id="history-value"></p>
+						</div>
+						<div class="output">
+							<p id="output-value"></p>
+						</div>
+					</div>
+					<div id="keyboard">
+						<button class="operator" id="clear">C</button>
+						<button class="operator" id="backspace">CE</button>
+						<button class="operator" id="%">%</button>
+						<button class="operator" id="/">&#247;</button>
+						<button class="number" id="7">7</button>
+						<button class="number" id="8">8</button>
+						<button class="number" id="9">9</button>
+						<button class="operator" id="*">&times;</button>
+						<button class="number" id="4">4</button>
+						<button class="number" id="5">5</button>
+						<button class="number" id="6">6</button>
+						<button class="operator" id="-">-</button>
+						<button class="number" id="1">1</button>
+						<button class="number" id="2">2</button>
+						<button class="number" id="3">3</button>
+						<button class="operator" id="+">+</button>
+						<button class="empty" id="empty"></button>
+						<button class="number" id="0">0</button>
+						<button class="empty" id="empty"></button>
+						<button class="operator" id="=">=</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="main-bmi" id="bmicalculator">
+			<div class="header-bmi">
+				<h1>BMI CALCULATOR</h1>
+			</div>
+
+			<div class="box">
+				<div class="bmi-calculator">
+
+					<div class="bmi-box">
+						<br><br>
+						<p>Weight (kg): </p>
+						<input type="text" id="weight" placeholder=" " required>
+						<p>Height (cm): </p>
+						<input type="text" id="height" placeholder=" " required>
+						<button type="submit" id="btn" class="bmi-button">CALCULATE</button>
+					</div>
+	
+					<div class="bmi-result">
+						<div class="bmi-output">
+							<p>Your Body Mass Index(BMI) is </p>
+							<div class="bmi-output-value" id="bmiresult"></div>
+							<div class="bmi-output-error" id="resulterror"></div>
+							<div class="bmi-output-text" id="textresult"></div>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+		</section>
+
+		<section class="main-unitconv" id="unitconverter">
+            <div class="header-unitconv">
+                <h1>Unit Converter</h1>
+            </div>
+
+            <div class="box">
+                <div class="unitconv">
+                    <div class="unitconv-box">
+						<p class="text">Insert Value:</p>
+						<input type="text" placeholder="Input" id="h">
+						<br>
+						<select id="inputType">
+							<option value="meter">Meter</option>
+							<option value="kilometer">Kilometer</option>
+							<option value="centimeter">Centimeter</option>
+						</select>
+						<p class="text">Insert Value:</p>
+						<input type="text" placeholder="Result" id="w">
+						<p id="result"></p>
+						<select  id="resultType">
+							<option value="meter">Meter</option>
+							<option value="kilometer">Kilometer</option>
+							<option value="centimeter">Centimeter</option>
+						</select>
+					</div>
+                </div>
+            </div>
+
+        </section>
+
+		<section class="main-taxcalc" id="taxcalculator">
+            <div class="header-taxcalc">
+                <h1>Income Tax Calculator</h1>
+            </div>
+
+            <div class="box">
+                <div class="taxcalc">
+                    <div class="taxcalc-box">
+						<label>Income:</label>
+						<p>
+							<input type="text" id="income" value="0">
+						</p>
+					
+						<p>
+							<button class="taxcalc-button" onclick="calc()" id="button-tax">Calculate</button>
+						</p>
+						
+						<p id="result-tax"> </p>
+						
+					</div>
+                </div>
+            </div>
+
+        </section>
+
+		<script src="script.js"></script>
+	</body>
+</html>
