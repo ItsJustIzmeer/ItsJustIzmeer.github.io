@@ -1,0 +1,48 @@
+html,body,.site-layout{
+  height:100%
+}
+
+.site-layout{
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  transition:transform 300ms ease-in-out, margin 300ms ease-in-out;
+  position:relative
+}
+
+body{
+  font-family:"Rubik",sans-serif;
+  color:#5A6B86;
+  overflow-x:hidden;
+  background:#171D26 center center no-repeat url("../img/bg.svg");
+  background-size:cover
+}
+
+.container{
+  max-width:1024px
+}
+
+.top-menu .username:after{
+  content:'';
+  border:5px solid transparent;
+  border-top-color:currentColor;
+  border-bottom:none;
+  display:block;
+  margin-left:8px
+}
+
+.nav-wrap{
+  top:100px;
+  transition:300ms ease-in-out all;
+  will-change:height
+}
+
+@media (min-width: 1024px){
+  .nav-wrap{
+    top:0;
+    height:auto !important
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+  }
